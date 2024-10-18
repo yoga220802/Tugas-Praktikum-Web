@@ -1,0 +1,95 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #282A36;
+    color: #F8F8F2;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: #ff4081;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.profile-pic-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.profile-pic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgb(65, 65, 65);
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    backface-visibility: hidden;
+}
+
+.front {
+    z-index: 2;
+}
+
+.profile-pic-container:hover .front {
+    transform: rotateY(180deg);
+}
+
+.profile-pic-container:hover .back {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.skills-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #44475A;
+    border: 1px solid #ddd;
+}
+
+.skills-table th,
+.skills-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.skills-table th {
+    background-color: #6272A4;
+}
+
+.logo-img {
+    width: 40px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
