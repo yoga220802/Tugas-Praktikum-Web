@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In Page</title>
+  <link rel="stylesheet" href="signin_styles.css" />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+   rel="stylesheet" />
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <script>
+   document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".input-group input").forEach((input) => {
+     // Cek apakah input memiliki nilai saat halaman dimuat
+     if (input.value !== "") {
+      input.classList.add("has-content");
+     }
+
+     input.addEventListener("focus", () => {
+      input.classList.add("has-content");
+     });
+
+     input.addEventListener("blur", () => {
+      if (input.value === "") {
+       input.classList.remove("has-content");
+      }
+     });
+    });
+   });
+  </script>
+ </head>
+ <body>
+  <div class="container">
+   <div class="sign-in-box">
+    <h1 class="title">Sign In</h1>
+    <p class="welcome-text">Welcome Back</p>
+    <div class="social-login">
+     <a href="#" class="social-icon" title="Login with Google">
+      <span
+       class="iconify"
+       data-icon="mdi:google-plus"
+       data-inline="false"></span>
+     </a>
+     <a href="#" class="social-icon" title="Login with Facebook">
+      <span class="iconify" data-icon="mdi:facebook" data-inline="false"></span>
+     </a>
+     <a href="#" class="social-icon" title="Login with GitHub">
+      <span class="iconify" data-icon="mdi:github" data-inline="false"></span>
+     </a>
+     <a href="#" class="social-icon" title="Login with LinkedIn">
+      <span class="iconify" data-icon="mdi:linkedin" data-inline="false"></span>
+     </a>
+     <a href="#" class="social-icon" title="Login with Apple">
+      <span class="iconify" data-icon="mdi:apple" data-inline="false"></span>
+     </a>
+    </div>
+
+    <p class="login-option">Or Sign In With Email & Password</p>
+    <form>
+     <div class="input-group">
+      <input type="email" id="email" required />
+      <label for="email">Email</label>
+     </div>
+     <div class="input-group">
+      <input type="password" id="password" required />
+      <label for="password">Password</label>
+     </div>
+
+     <a href="#" class="forgot-password">Forget Your Password?</a>
+     <button type="submit" class="sign-in-btn">SIGN IN</button>
+    </form>
+   </div>
+   <div class="sign-up">
+    <a href="./signup.html">SIGN UP</a>
+   </div>
+  </div>
+ </body>
+</html>

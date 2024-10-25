@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coba Form</title>
+  <style>
+   body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+   }
+
+   .name-input {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+   }
+
+   .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+   }
+
+   .input-form {
+    margin-top: 20px;
+   }
+   .form-label {
+    font-weight: bold;
+    font-size: 10px;
+   }
+  </style>
+ </head>
+ <body>
+  <form action="">
+   <div class="form-container">
+    <div class="name-input">
+     <div class="input-form">
+      <label for="first-name-form" class="form-label">First Name: </label>
+      <br />
+      <input type="text" placeholder="First Name" id="first-name-form" />
+     </div>
+     <div class="input-form">
+      <label for="last-name-form" class="form-label">Last Name: </label>
+      <br />
+      <input type="text" id="last-name-form" placeholder="Last Name" />
+     </div>
+    </div>
+    <label for="password-form" class="form-label">Password</label>
+    <input type="password" placeholder="Password" id="password-form" />
+   </div>
+
+   <div class="radio">
+    <h3>Jenis Kelamin</h3>
+    <input type="radio" name="jk-laki" id="jk-laki" />
+    <label for="jk-laki">Kontol</label>
+    <input type="radio" name="jk-cw" id="jk-cw" />
+    <label for="jk-cw">Non-Kontol</label>
+   </div>
+   <div class="checkbox-container">
+    <h3>Hobi</h3>
+    <input type="checkbox" name="tidur" id="check-tidur"> <label for="check-tidur">Tidur</label>
+    <input type="checkbox" name="olahraga" id="check-olahraga"> <label for="check-olahraga">Olahraga</label>
+    <input type="checkbox" name="gaming" id="check-gaming"> <label for="check-gaming">Gaming</label>
+   </div>
+   <div class="jurusan">
+    <h3>Jurusan</h3>
+    <label for="jurusan-container">Pilih Jurusan</label>
+    <select name="jurusan" id="jurusan-container">
+        <option value="IF">Teknik Informatika</option>
+        <option value="TS">Teknik Sipil</option>
+        <option value="TI">Teknik Industri</option>
+        <option value="SI">Sistem Informasi</option>
+        <option value="AR">Arsitektur</option>
+    </select>
+    <label for="hp">No HP</label>
+    <input type="range" id="hp">
+   </div>
+  </form>
+ </body>
+</html>
