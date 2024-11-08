@@ -75,11 +75,9 @@
                         $hasil = "Operasi tidak dikenali.";
                 }
 
-                // Tampilkan hasil dalam div field-hasil
                 echo "<div id='field-hasil' class='field-hasil'>Hasil: $hasil</div>";
             } else {
-                // Kosongkan div hasil saat pertama kali halaman dimuat
-                echo "<div id='field-hasil' class='field-hasil'></div>";
+                echo "<div id='field-hasil' class='field-hasil'>Belum melakukan perhitungan</div>";
             }
             ?>
         </div>

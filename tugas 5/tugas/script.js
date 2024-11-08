@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
  const angka1Input = document.querySelector("input[name='angka1']");
  const angka2Input = document.querySelector("input[name='angka2']");
  const operasiSelect = document.querySelector("select[name='operasi']");
- const hasilDiv = document.getElementById("field-hasil"); // Referensi ke div hasil
+ const hasilDiv = document.getElementById("field-hasil");
 
  function saveToLocalStorage() {
   localStorage.setItem("angka1", angka1Input.value);
@@ -27,8 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
   angka2Input.value = "";
   angka1Input.classList.remove("has-content");
   angka2Input.classList.remove("has-content");
-
-  // Kosongkan hasil
   hasilDiv.innerHTML = "";
  }
 
