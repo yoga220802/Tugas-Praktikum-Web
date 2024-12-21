@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas PHP</title>
+</head>
+<body>
+    <form>
+        <input type="number" placeholder="angka1" id="angka1">
+        <input type="number" placeholder="angka2" id="angka2">
+        <button type="button" onclick="hitungModulus()">Hitung Modulus</button>
+    </form>
+    <p id="hasil"></p>
+
+    <script>
+        function hitungModulus() {
+            let angka1 = document.getElementById("angka1").value;
+            let angka2 = document.getElementById("angka2").value;
+
+            if (angka1 === "" || angka2 === "") {
+                document.getElementById("hasil").innerText = "Harap masukkan kedua angka.";
+                return;
+            }
+
+            angka1 = parseInt(angka1);
+            angka2 = parseInt(angka2);
+
+            if (angka2 === 0) {
+                document.getElementById("hasil").innerText = "Pembagi tidak boleh 0.";
+                return;
+            }
+
+            var hasil = angka1 % angka2;
+
+            document.getElementById("hasil").innerText = "Hasil modulus: " + hasil;
+        }
+    </script>
+</body>
+</html>
